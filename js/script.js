@@ -36,7 +36,7 @@ function createGrid() {
         return;
     }
     let gridSize = gridSide ** 2;
-    for (i = 0; i < gridSize; i++) {
+    for (let i = 0; i < gridSize; i++) {
         const gridItem = document.createElement('div');
         container.appendChild(gridItem);
         gridItem.classList.add('grid-item');
@@ -48,4 +48,5 @@ function mouseTrail() {
     gridItems.forEach(gridItem => {
         gridItem.addEventListener('mouseenter', () => {
             gridItem.style.backgroundColor = '#000';
+            //gridItem.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
 })})};
