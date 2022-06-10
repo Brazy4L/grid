@@ -1,10 +1,23 @@
 const body = document.querySelector('body');
-const bigcontainer = document.querySelector('.bigcontainer');
+const div = document.createElement('div');
+const div2 = document.createElement('div');
+
+body.appendChild(div);
+div.classList.add('big-container');
+const bigcontainer = document.querySelector('.big-container');
+
+bigcontainer.appendChild(div2);
+div2.classList.add('container');
 const container = document.querySelector('.container');
 
 const button = document.createElement('button');
 body.insertAdjacentElement('afterbegin', button);
 button.textContent = 'Create a Grid';
+
+body.style.cssText = 'margin: 0; background-color: #202020;';
+bigcontainer.style.cssText = 'display: flex; justify-content: center;';
+container.style.cssText = 'display: flex; flex-wrap: wrap; width: 92vh';
+button.style.cssText = 'display: flex; height: 30px; width: 120px; border: none; border-radius: 10px; cursor: pointer; box-shadow: 0 9px #5c5c5c; margin: 20px auto; justify-content: center; align-items: center;';
 
 button.addEventListener('click', function () {
     removeGrid();
@@ -14,7 +27,7 @@ button.addEventListener('click', function () {
 
 function removeGrid() {
     container.innerHTML = '';
-}
+};
 
 function createGrid() {
     let gridSide = prompt('Enter a number between 10 and 100');
@@ -27,8 +40,8 @@ function createGrid() {
 }};
 
 function mouseTrail() {
-const gridItems = document.querySelectorAll('.grid-item');
-gridItems.forEach(gridItem => {
-    gridItem.addEventListener('mouseenter', () => {
-        gridItem.style.backgroundColor = '#000';
+    const gridItems = document.querySelectorAll('.grid-item');
+    gridItems.forEach(gridItem => {
+        gridItem.addEventListener('mouseenter', () => {
+            gridItem.style.backgroundColor = '#000';
 })})};
