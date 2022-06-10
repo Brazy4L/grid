@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    width: 100vh;
+}
+
+.grid-item {
+
+}
