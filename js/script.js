@@ -31,6 +31,10 @@ function removeGrid() {
 
 function createGrid() {
     let gridSide = prompt('Enter a number between 10 and 100');
+    if (gridSide < 10 || gridSide > 100) {
+        alert('Please enter a number between 10 and 100');
+        return;
+    }
     let gridSize = gridSide ** 2;
     for (i = 0; i < gridSize; i++) {
         const gridItem = document.createElement('div');
