@@ -1,14 +1,15 @@
 body {
     margin: 0;
+    margin-top: 10vh;
     background-color: #202020;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 }
 
 .container {
     display: grid;
-    grid-gap: 5px;
-    width: 100vh;
+    width: 89vh;
 }
 
 .grid-item {
