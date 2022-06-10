@@ -1,7 +1,6 @@
 body {
     margin: 0;
     background-color: #202020;
-
 }
 
 .big-container {
@@ -24,6 +23,8 @@ button {
     cursor: pointer;
     box-shadow: 0 9px #5c5c5c;
     margin: 20px auto;
+    justify-content: center;
+    align-items: center;
 }
 
 button:hover {
